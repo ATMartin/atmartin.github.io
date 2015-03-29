@@ -3,7 +3,7 @@
 
 (function () {
 
-  var s = skrollr.init({ render: function(data) { console.log(data.curTop); } });  
+  var s = skrollr.init({ render: function(data) { /* console.log(data.curTop); */ } });  
   var slides = document.getElementsByClassName('homeSlide');
 
   setTimeout(function() { adjustWindow(); }, 300);

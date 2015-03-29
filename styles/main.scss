@@ -14,35 +14,15 @@ body {
   margin: 0;
 }
 
-.backpanel {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
 #splash {
+  text-align: center;
   .logo {
+    position: fixed;
     display: inline-block;
-    position: absolute;
-    top: 48%;
-    left: 48%;
-    background-color: black;
-    border-radius: 50%;
-    text-align: center;
-    overflow: hidden;
-    .logo-initials {
-      display: inline-block;
-      margin-top: 10%;
-      color: white;
-      font-size: 5em;
-      font-weight: bold;
-      font-family: 'Helvetica Neue', sans-serif;
-    }
+    background-image: url('../img/am-logo.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .inner-text {
