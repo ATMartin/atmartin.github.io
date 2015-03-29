@@ -1,0 +1,151 @@
+//THEME VARIABLES
+$font-headers: 'Open Sans', sans-serif;
+$font-bodytext: 'Time New Roman', serif;
+
+
+//RULES
+
+
+* { box-sizing: border-box; }
+  
+html, 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.backpanel {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+#splash {
+  .logo {
+    display: inline-block;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    .logo-initials {
+      display: inline-block;
+      margin-top: 10%;
+      color: white;
+      font-size: 5em;
+      font-weight: bold;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+  }
+
+  .inner-text {
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    border: 2px solid black;
+    width: 18%;
+    height: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 3px #333;
+    .upper-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      border: 2px hidden black;  
+      border-bottom-style: dashed;
+      .circle {
+        position: absolute;
+        left: 28%;
+        top: 13%;
+        width: 45%;
+        height: 75%;
+        color: white;
+        background: black;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 10%;
+      }
+    }
+    .upper-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%; 
+      height: 50%;
+      border: 2px hidden black;
+      border-left-style: dotted;
+     .diamond {
+        position: absolute;
+        left: 35%;
+        top: 30%;
+        height: 45%;
+        width: 30%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        padding: 5%;
+        transform: rotate(45deg);
+        * { transform: rotate(-45deg); }
+     }
+    } 
+    .lower-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      border: 2px hidden black;
+      border-right-style: double;  
+      .square {
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        width: 70%;
+        height: 70%;
+        background: black;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        padding-top: 15%;
+      }
+    }
+    .lower-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      border: 2px hidden black;
+      border-top-style: solid;
+      .triangle {
+        position: absolute;
+        left: 10%;
+        top: 25%;
+        width: 80%;
+        height: 50%;
+        background: black;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 2em;
+        padding-top: 8%;
+      }
+    }
+  }
+}
+
+#about {
+}
+
+#portfolio {
+}

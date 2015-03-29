@@ -2,18 +2,93 @@
 <html>
 <head>
   <title>Alex Martin</title>
-  <style>
-    body {
-      font: 'Helvetica Neue', 'Helvetica', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/main.css"> 
 </head>
 
 <body>
-  <h1>Alex Martin</h1>
-  <h3><a href="http://twitter.com/ADotMartin">@ADotMartin</a></h3>
-  <h3>martin.alex.t@gmail.com</h3>
+  <section id="splash" class="homeSlide">
+    <!--
+    <div class="backpanel" 
+      data-center="background-color: rgb(0, 0, 255);"
+      data--100p-top="background-color: rgb(255, 0, 0);"
+      data-anchor-target="#splash"
+    >
+    -->
+    <div class="backpanel">
+      <div class="logo"
+        data-center="height: 200px; width: 200px; left: 46%; top: 38%; opacity: 1;"
+        data--50p-top="height: 10000px; width: 10000px; left: -190%; top: -300%; opacity: 1;"
+        data--100p-top="height: 10000px; width: 10000px; left: -190%; top: -300%; opacity: 0;"  
+      >
+        <span class="logo-initials"
+          data-center="font-size: 20px; margin-left: 0px;"
+          data--200p-top="font-size: 9000px; margin-left: -800px;"
+        >
+        am
+        </span>
+      </div>
+      <div class="inner-text"
+        data--75p-top="opacity: 0; width: 1%; height: 1%; top: 48%; left: 48%;"
+        data--200p-top="opacity: 1; width: 80%; height: 90%; top: 5%; left: 9%;"
+      >
+        <div class="upper-left">
+          <div class="circle">
+            <h2>Alex Martin</h2>
+            <p>Web Application Engineer</p>
+            <p>
+              Got a job? Need a hand?
+              <br>
+              Get in touch!
+            </p>
+            <p>
+              <a href="http://twitter.com/ADotMartin">@ADotMartin</a><br>
+              martin.alex.t@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="upper-right">
+          <div class="diamond">
+            <a href="http://blog.atmartin.io"><h2>Blog</h2></a>
+          </div>
+        </div>
+        <div class="lower-left">
+          <div class="square">
+            <h2>Portfolio / Samples</h2>
+          </div>
+        </div>
+        <div class="lower-right">
+          <div class="triangle">  
+            <h2>Thanks!</h2>
+          </div>
+        </div>
+      </div> 
+      <div class="scroll-prompt">
+        &nbsp;
+      </div>
+    </div>
+  </section>
 
-  <h2>martin.alex.t@gmail.com</h2>
+  <!--
+  <section id="about" class="homeSlide">
+   <div class="backpanel"
+      data-center="background-color: rgb(0, 255, 0);"
+      data-bottom-top="background-color: rgb(255, 0, 0);"
+      data-anchor-target="#about"
+   > 
+    This is the about section.
+    </div>
+  </section>
+  <section id="portfolio">
+    This is the portfolio section.
+  </section>
+  <section id="resume">
+    This is my resume section.
+  </section>
+  <section id="contact">
+    This is where my contact info is.
+  </section> 
+  -->  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 <body>
 </html>
