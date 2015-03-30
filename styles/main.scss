@@ -49,9 +49,13 @@ body {
       background: #fff;
       opacity: 0;
       z-index: 5;
+      cursor: pointer;
     }
     .menu-header {
-      h2 { margin: 0; }
+      h2 { 
+        margin: 0; 
+        letter-spacing: 0.1em;
+      }
       padding: 1%;
       font-weight: 700;
       font-size: 3em;
@@ -86,7 +90,7 @@ body {
           opacity: 0;
           font-size: 1.5em;
           overflow: scroll;
-          ul { list-style-type: none; }
+          ul { padding: 0; list-style-position: inside; }
           .headshot {
             height: 300px;
             border: 2px solid #333;
@@ -100,7 +104,39 @@ body {
       }
     }
   }
+  
+  .panel.resume {
+    text-align: left;
+    padding: 0;
+    h2 {
+      display: block;
+      margin: 0;
+      background: #ddd;
+      width: 100%;
+    }
+    h3 {
+      margin: 1% 0;
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 300;
+      font-style: italic;
+    }
+    h4 {
+      margin: 0;
+    }
+    h5 {
+      margin: 0 0 0 2%;
+      font-size: 1em;
+      font-weight: 400;
+      font-style: italic;
+    }
+    p {
+      margin: 0.5% 0 3% 4%;
+    }
+  }
+
 }
+
 
 #about {
 }

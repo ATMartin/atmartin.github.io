@@ -38,14 +38,16 @@ body {
       border-top: 1px solid #555;
       background: #fff;
       opacity: 0;
-      z-index: 5; }
+      z-index: 5;
+      cursor: pointer; }
     #menu .menu .menu-header {
       padding: 1%;
       font-weight: 700;
       font-size: 3em;
       border-bottom: 1px solid #555; }
       #menu .menu .menu-header h2 {
-        margin: 0; }
+        margin: 0;
+        letter-spacing: 0.1em; }
     #menu .menu .menu-nav {
       list-style-type: none;
       padding: 0;
@@ -76,7 +78,8 @@ body {
           font-size: 1.5em;
           overflow: scroll; }
           #menu .menu .menu-nav > li.panel ul {
-            list-style-type: none; }
+            padding: 0;
+            list-style-position: inside; }
           #menu .menu .menu-nav > li.panel .headshot {
             height: 300px;
             border: 2px solid #333;
@@ -84,5 +87,28 @@ body {
         #menu .menu .menu-nav > li.toggle:hover {
           background: #000;
           color: #fff; }
+  #menu .panel.resume {
+    text-align: left;
+    padding: 0; }
+    #menu .panel.resume h2 {
+      display: block;
+      margin: 0;
+      background: #ddd;
+      width: 100%; }
+    #menu .panel.resume h3 {
+      margin: 1% 0;
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 300;
+      font-style: italic; }
+    #menu .panel.resume h4 {
+      margin: 0; }
+    #menu .panel.resume h5 {
+      margin: 0 0 0 2%;
+      font-size: 1em;
+      font-weight: 400;
+      font-style: italic; }
+    #menu .panel.resume p {
+      margin: 0.5% 0 3% 4%; }
 
 /*# sourceMappingURL=main.css.map */
