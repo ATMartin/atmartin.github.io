@@ -25,12 +25,46 @@
         <h2>&nbsp;&nbsp;&nbsp;a l e x  &nbsp;&nbsp;&bull;&nbsp;&nbsp;  m a r t i n</h2>
       </div>
       <ul class="menu-nav">
-        <li>about</li>
-        <li>portfolio</li>
-        <li>resume</li>
-        <li>contact</li>
+        <li class="about toggle">about</li>
+        <li class="about panel">
+          <img class="headshot" src="img/headshot.jpg">
+          <br>
+          <h3>I'm a lifelong learner</h3>
+          <p>I love code and simplicity. I enjoy challenging myself to learn new things. I love fast-paced and dynamic. I believe in crowdsourcing and the greater good.</p>
+
+          <p>I'm a full-stack web developer currently located in South Carolina, US.</p>
+          <p>
+            Current favorites:
+            <ul>
+              <li>Ember</li>
+              <li>Node & Express</li>
+              <li>Ruby on Rails</li>
+            </ul>
+          </p>
+          
+          <p>I'm always open to new ideas & opportunities.</p>
+          
+          <p>Learn more about me on <a href="http://blog.atmartin.io">my blog</a> or <a href="https://www.linkedin.com/profile/view?id=409609864">my LinkedIn</a>.</p> 
+        </li>
+        <li class="portfolio toggle">portfolio</li>
+        <li class="portfolio panel">
+          More goodies
+        </li>
+        <li class="resume toggle">resume</li>
+        <li class="resume panel">
+          Resume goes here
+        </li>
+        <li class="contact toggle">contact</li>
+        <li class="contact panel">
+          email: test@test.com
+          <br>
+          phone: 555-555-5555
+          <br>
+          twitter: @tweet
+        </li>
       </ul>
-    <div>
+      <div class="close-panel">&lt;&lt;  menu</div>
+    </div>
   </section>
     
     <!--
@@ -103,7 +137,9 @@
     This is where my contact info is.
   </section> 
   -->  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
+  <script type="text/javascript" src="js/scrollhack.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 <body>
 </html>

@@ -26,7 +26,19 @@ body {
     width: 40%;
     height: 80%;
     border: 1px solid #555;
-    font-family: 'Lato', sans-serif; }
+    font-family: 'Lato', sans-serif;
+    overflow: hidden; }
+    #menu .menu .close-panel {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 8%;
+      padding: 2%;
+      font-size: 1.5em;
+      border-top: 1px solid #555;
+      background: #fff;
+      opacity: 0;
+      z-index: 5; }
     #menu .menu .menu-header {
       padding: 1%;
       font-weight: 700;
@@ -37,13 +49,40 @@ body {
     #menu .menu .menu-nav {
       list-style-type: none;
       padding: 0;
-      margin: 0; }
-      #menu .menu .menu-nav li {
-        padding: 9.5% 5%;
+      margin: 0;
+      height: 100%;
+      overflow: hidden; }
+      #menu .menu .menu-nav > li {
+        background: #fff;
+        height: 22%;
         border-bottom: 1px solid #555;
-        font-size: 2em;
-        font-weight: 300; }
-        #menu .menu .menu-nav li:last-child {
+        font-size: 3em;
+        font-weight: 300;
+        padding-top: 7%;
+        z-index: 0;
+        transition: all ease 0.5s; }
+        #menu .menu .menu-nav > li:last-child {
           border: none; }
+        #menu .menu .menu-nav > li.panel {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          padding: 8% 3% 8% 3%;
+          z-index: 5;
+          opacity: 0;
+          font-size: 1.5em;
+          overflow: scroll; }
+          #menu .menu .menu-nav > li.panel ul {
+            list-style-type: none; }
+          #menu .menu .menu-nav > li.panel .headshot {
+            height: 300px;
+            border: 2px solid #333;
+            border-radius: 50%; }
+        #menu .menu .menu-nav > li.toggle:hover {
+          background: #000;
+          color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
