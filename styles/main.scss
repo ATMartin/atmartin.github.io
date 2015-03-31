@@ -24,6 +24,30 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .scroll-prompt {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    .prompt-text {
+      display: inline-block;
+      position: fixed;
+      left: 48.2%;
+      transition: all ease 0.5s;
+      -webkit-animation-name: pulse;
+      -webkit-animation-duration: 4s;
+      -webkit-animation-iteration-count: infinite;
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    60% { opacity: 1; }
+    70% { opacity: 0; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
 }
 
 #menu {

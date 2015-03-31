@@ -1,5 +1,6 @@
 $(document).ready(function() {
- 
+
+//Panel Accordion / Fade 
 var activePanel;
 var menuHeight = $('.menu-nav').height();
 var menuTop = $('.menu-nav').offset().top;
@@ -17,9 +18,6 @@ $('.close-panel').on('click', function(e) {
   activePanel.next().css({'opacity': '0', 'pointer-events': 'none'});
   $('.toggle').css('opacity', '1').show();
   $(this).css('opacity', '0');
-});
+});  
 
-  
-  
-  
 });
