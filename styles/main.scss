@@ -61,7 +61,7 @@ body {
     height: 80%;
     border: 1px solid #555;
     font-family: 'Lato', sans-serif;
-    overflow: hidden;
+    overflow: scroll;
     .close-panel {
       position: absolute;
       bottom: 0;
@@ -90,7 +90,6 @@ body {
       padding: 0;
       margin: 0;
       height: 100%;
-      overflow: hidden;
       &>li {
         background: #fff;
         height: 22%;

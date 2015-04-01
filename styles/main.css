@@ -52,7 +52,7 @@ body {
     height: 80%;
     border: 1px solid #555;
     font-family: 'Lato', sans-serif;
-    overflow: hidden; }
+    overflow: scroll; }
     #menu .menu .close-panel {
       position: absolute;
       bottom: 0;
@@ -77,8 +77,7 @@ body {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      height: 100%;
-      overflow: hidden; }
+      height: 100%; }
       #menu .menu .menu-nav > li {
         background: #fff;
         height: 22%;
