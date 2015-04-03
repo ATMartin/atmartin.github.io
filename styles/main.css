@@ -6,12 +6,19 @@ body {
   padding: 0;
   margin: 0; }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0; }
+
 #splash {
   text-align: center; }
   #splash .logo {
     position: fixed;
     display: inline-block;
-    background-image: url("../img/am-logo.png");
+    background-image: url("../img/am-logo.svg");
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat; }
@@ -42,97 +49,126 @@ body {
   100% {
     opacity: 0; } }
 #menu {
-  text-align: center; }
-  #menu .menu {
-    position: fixed;
-    display: inline-block;
-    top: 10%;
-    left: 30%;
-    width: 40%;
-    height: 80%;
-    border: 1px solid #555;
-    font-family: 'Lato', sans-serif;
-    overflow: scroll; }
-    #menu .menu .close-panel {
-      position: absolute;
-      bottom: 0;
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  width: 60%;
+  margin: 0 auto;
+  display: inline-block; }
+  @media (max-width: 850px) {
+    #menu {
       width: 100%;
-      height: 8%;
-      padding: 2%;
-      font-size: 1.5em;
-      border-top: 1px solid #555;
-      background: #fff;
-      opacity: 0;
-      z-index: 5;
-      cursor: pointer; }
-    #menu .menu .menu-header {
-      padding: 1%;
-      font-weight: 700;
+      left: 0;
+      top: 0; } }
+
+.menu {
+  position: relative;
+  min-width: 400px;
+  margin: 10% auto 0 auto;
+  border: 2px solid #333333;
+  position: relative;
+  box-shadow: 0px 1px 5px #AAAAAA;
+  text-align: center; }
+  .menu .menu-header {
+    border-bottom: 2px solid #333333;
+    padding: 2%;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    .menu .menu-header h2 {
+      font-family: "Lato", sans-serif;
       font-size: 3em;
-      border-bottom: 1px solid #555; }
-      #menu .menu .menu-header h2 {
-        margin: 0;
-        letter-spacing: 0.1em; }
-    #menu .menu .menu-nav {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      height: 100%; }
-      #menu .menu .menu-nav > li {
-        background: #fff;
-        height: 22%;
-        border-bottom: 1px solid #555;
-        font-size: 3em;
-        font-weight: 300;
-        padding-top: 7%;
-        z-index: 0;
-        transition: all ease 0.5s; }
-        #menu .menu .menu-nav > li:last-child {
-          border: none; }
-        #menu .menu .menu-nav > li.panel {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          pointer-events: none;
-          top: 0;
-          left: 0;
-          padding: 8% 3% 8% 3%;
-          z-index: 5;
-          opacity: 0;
+      letter-spacing: 0.2em;
+      font-weight: 400; }
+      @media (max-width: 530px) {
+        .menu .menu-header h2 {
+          font-size: 2em; } }
+  .menu .menu-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 75px; }
+    .menu .menu-nav .toggle {
+      border: 1px solid #888888;
+      padding: 2%;
+      height: 15vh;
+      min-height: 50px;
+      line-height: 2.5em;
+      transition: all ease 0.5s;
+      font-family: "Lato", sans-serif;
+      font-size: 2.5em;
+      font-weight: 300; }
+      @media (max-width: 530px) {
+        .menu .menu-nav .toggle {
           font-size: 1.5em;
-          overflow: scroll; }
-          #menu .menu .menu-nav > li.panel ul {
-            padding: 0;
-            list-style-position: inside; }
-          #menu .menu .menu-nav > li.panel .headshot {
-            height: 300px;
-            border: 2px solid #333;
-            border-radius: 50%; }
-        #menu .menu .menu-nav > li.toggle:hover {
-          background: #000;
-          color: #fff; }
-  #menu .panel.resume {
-    text-align: left;
-    padding: 0; }
-    #menu .panel.resume h2 {
-      display: block;
-      margin: 0;
-      background: #ddd;
-      width: 100%; }
-    #menu .panel.resume h3 {
-      margin: 1% 0;
-      text-align: center;
-      font-size: 0.8em;
-      font-weight: 300;
-      font-style: italic; }
-    #menu .panel.resume h4 {
-      margin: 0; }
-    #menu .panel.resume h5 {
-      margin: 0 0 0 2%;
-      font-size: 1em;
-      font-weight: 400;
-      font-style: italic; }
-    #menu .panel.resume p {
-      margin: 0.5% 0 3% 4%; }
+          line-height: 4em; } }
+      .menu .menu-nav .toggle:hover {
+        background: black;
+        color: white; }
+    .menu .menu-nav .panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 4% 4% 60px 4%;
+      pointer-events: none;
+      transition: all ease 0.5s;
+      opacity: 0;
+      overflow-y: scroll;
+      font-family: "Lato", sans-serif; }
+      .menu .menu-nav .panel:hover {
+        background: white;
+        color: black; }
+  .menu .close-panel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    border-top: 2px solid #333333;
+    display: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    box-shadow: 0 -1px 5px #AAAAAA;
+    transition: all ease 0.5s; }
+    .menu .close-panel:hover {
+      background: #333333;
+      color: white; }
+
+#about {
+  font-size: 1.5em; }
+  #about .headshot {
+    height: 300px;
+    border: 2px solid #333333;
+    box-shadow: 0 1px 5px #AAAAAA;
+    border-radius: 50%; }
+  #about ul {
+    padding: 0;
+    margin: 0; }
+    #about ul li {
+      list-style-position: inside; }
+
+#resume {
+  text-align: left; }
+  #resume h2 {
+    background: #AAAAAA; }
+  #resume h4 {
+    padding-left: 2%; }
+  #resume h5 {
+    font-size: 1em;
+    padding-left: 4%;
+    font-style: italic; }
+  #resume p {
+    padding-left: 4%;
+    font-weight: 300;
+    margin-top: 0; }
+
+#contact {
+  font-size: 2em;
+  font-weight: 300; }
 
 /*# sourceMappingURL=main.css.map */

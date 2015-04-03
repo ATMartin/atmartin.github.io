@@ -1,11 +1,15 @@
 //THEME VARIABLES
-$font-headers: 'Open Sans', sans-serif;
-$font-bodytext: 'Time New Roman', serif;
+$font-sans: 'Lato', sans-serif;
+$font-serif: 'Time New Roman', serif;
 
+$dark: #AAAAAA;
+$darker: #888888;
+$darkest: #333333;
+
+$logo-image: url('../img/am-logo.png');
+$logo-svg: url('../img/am-logo.svg');
 
 //RULES
-
-
 * { box-sizing: border-box; }
   
 html, 
@@ -14,12 +18,19 @@ body {
   margin: 0;
 }
 
+h1,
+h2, 
+h3, 
+h4, 
+h5 { margin: 0; }
+
+
 #splash {
   text-align: center;
   .logo {
     position: fixed;
     display: inline-block;
-    background-image: url('../img/am-logo.png');
+    background-image: $logo-svg;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -50,119 +61,151 @@ body {
   }
 }
 
+//************* MAIN MENU ****************
 #menu {
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  width: 60%;
+  margin: 0 auto;
+  display: inline-block;
+
+  @media (max-width: 850px) {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.menu {
+  position: relative;
+  min-width: 400px;
+  margin: 10% auto 0 auto;
+  border: 2px solid $darkest;
+  position: relative;
+  box-shadow: 0px 1px 5px $dark;
   text-align: center;
-  .menu {
-    position: fixed;
-    display: inline-block;
-    top: 10%;
-    left: 30%;
-    width: 40%;
-    height: 80%;
-    border: 1px solid #555;
-    font-family: 'Lato', sans-serif;
-    overflow: scroll;
-    .close-panel {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 8%;
-      padding: 2%;
-      font-size: 1.5em;
-      border-top: 1px solid #555;
-      background: #fff;
-      opacity: 0;
-      z-index: 5;
-      cursor: pointer;
-    }
-    .menu-header {
-      h2 { 
-        margin: 0; 
-        letter-spacing: 0.1em;
-      }
-      padding: 1%;
-      font-weight: 700;
+  .menu-header {
+    border-bottom: 2px solid $darkest;
+    padding: 2%;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    h2 {
+      font-family: $font-sans;
       font-size: 3em;
-      border-bottom: 1px solid #555; 
-    }
-    .menu-nav {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      &>li {
-        background: #fff;
-        height: 22%;
-        border-bottom: 1px solid #555;
-        &:last-child { border: none; }
-        font-size: 3em;
-        font-weight: 300;
-        padding-top: 7%;
-        z-index: 0;
-        transition: all ease 0.5s;
-        &.panel {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          pointer-events: none;
-          //display: none;
-          top: 0;
-          left: 0;
-          padding: 8% 3% 8% 3%;
-          z-index: 5;
-          opacity: 0;
-          font-size: 1.5em;
-          overflow: scroll;
-          ul { padding: 0; list-style-position: inside; }
-          .headshot {
-            height: 300px;
-            border: 2px solid #333;
-            border-radius: 50%;
-          }
-        }
-        &.toggle:hover {
-          background: #000;
-          color: #fff;
-        }
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      @media (max-width: 530px) {
+        font-size: 2em;
       }
     }
   }
   
-  .panel.resume {
-    text-align: left;
+  .menu-nav {
+    list-style-type: none;
     padding: 0;
-    h2 {
-      display: block;
-      margin: 0;
-      background: #ddd;
-      width: 100%;
-    }
-    h3 {
-      margin: 1% 0;
-      text-align: center;
-      font-size: 0.8em;
+    margin: 0;
+    padding-top: 75px;
+    .toggle {
+      border: 1px solid $darker;
+      padding: 2%;
+      height: 15vh;
+      min-height: 50px;
+      line-height: 2.5em;
+      transition: all ease 0.5s;
+      font-family: $font-sans;
+      font-size: 2.5em;
       font-weight: 300;
-      font-style: italic;
+      @media (max-width: 530px) {
+        font-size: 1.5em;
+        line-height: 4em;
+      }
+      &:hover {
+        background: black;
+        color: white;
+      }
     }
-    h4 {
-      margin: 0;
-    }
-    h5 {
-      margin: 0 0 0 2%;
-      font-size: 1em;
-      font-weight: 400;
-      font-style: italic;
-    }
-    p {
-      margin: 0.5% 0 3% 4%;
+    .panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 4% 4% 60px 4%;
+      pointer-events: none;
+      transition: all ease 0.5s;
+      opacity: 0;
+      overflow-y: scroll;
+      font-family: $font-sans;
+      &:hover {
+        background: white;
+        color: black;
+      }
     }
   }
 
+  .close-panel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    border-top: 2px solid $darkest;
+    display: none;
+    font-family: $font-sans;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    box-shadow: 0 -1px 5px $dark;
+    transition: all ease 0.5s;
+    &:hover {
+      background: $darkest;
+      color: white;
+    }
+  }
 }
-
 
 #about {
+  font-size: 1.5em;
+  .headshot {
+    height: 300px;
+    border: 2px solid $darkest;
+    box-shadow: 0 1px 5px $dark;
+    border-radius: 50%;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style-position: inside;
+    }
+  } 
 }
 
-#portfolio {
+#resume {
+  text-align: left;
+  h2 {
+    background: $dark;
+  }
+  h4 {
+    padding-left: 2%;
+  }
+  h5 {
+    font-size: 1em;
+    padding-left: 4%;
+    font-style: italic;
+  }
+  p {
+    padding-left: 4%;
+    font-weight: 300;
+    margin-top: 0;
+  }
+}
+
+#portfolio {}
+#contact {
+  font-size: 2em;
+  font-weight: 300;
 }

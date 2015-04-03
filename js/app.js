@@ -2,22 +2,33 @@ $(document).ready(function() {
 
 //Panel Accordion / Fade 
 var activePanel;
-var menuHeight = $('.menu-nav').height();
-var menuTop = $('.menu-nav').offset().top;
+var toggles = $('.toggle');
+var header = $('.menu-header');
+
+var stateActive = {
+  'opacity': 1,
+  'pointer-events': 'auto'
+};
+
+var stateHidden = {
+  'opacity': 0,
+  'pointer-events': 'none'
+}
   
 $('.toggle').on('click', function() { 
   activePanel = $(this);
-  activePanel.toggleClass('toggled');
-  $('.toggle').css('opacity', '0');
-  activePanel.next().css({'opacity':'1', 'pointer-events': 'auto'});
-  $('.close-panel').css('opacity', '1');
+  toggles.css(stateHidden);
+  header.css(stateHidden);
+  activePanel.next().css(stateActive);
+  $('.close-panel').show();
 });
 
 $('.close-panel').on('click', function(e) {
-  activePanel.toggleClass('toggled');
-  activePanel.next().css({'opacity': '0', 'pointer-events': 'none'});
-  $('.toggle').css('opacity', '1').show();
-  $(this).css('opacity', '0');
+  activePanel.next().css(stateHidden);
+  toggles.css(stateActive).show();
+  header.css(stateActive);
+  $(this).hide();
+  activePanel = null;
 });  
 
 });

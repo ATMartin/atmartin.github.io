@@ -10,8 +10,8 @@
   <section id="splash" class="homeSlide">
     <div class="logo"
       data-top="height: 200px; width: 200px; left: 45%; top:40%; opacity: 1;"
-      data--100p-top="height: 25000px; width: 25000px; left: -600%; top: -850%; opacity: 1;"
-      data--110p-top="height: 25000px; width: 25000px; left: -600%; top: -850%; opacity: 0;"
+      data--50p-top="height: 25000px; width: 25000px; left: -600%; top: -850%; opacity: 1;"
+      data--60p-top="height: 25000px; width: 25000px; left: -600%; top: -850%; opacity: 0;"
     >
     &nbsp;
     </div>
@@ -24,15 +24,16 @@
   </section>
   <section id="menu" class="homeSlide">
     <div class="menu"
-      data--100p-top="opacity: 0;"
-      data--120p-top="opacity: 1;"
+      data--50p-top="opacity: 0;"
+      data--60p-top="opacity: 1;"
+      data--100p-top="opacity: 1;"
     >
       <div class="menu-header">
         <h2>&nbsp;&nbsp;alex &nbsp;&bull;&nbsp; martin</h2>
       </div>
       <ul class="menu-nav">
         <li class="about toggle">about</li>
-        <li class="about panel">
+        <li class="panel" id="about">
           <img class="headshot" src="img/headshot.jpg">
           <br>
           <h3>I'm a lifelong learner</h3>
@@ -51,13 +52,13 @@
           <p>Learn more about me on <a href="http://blog.atmartin.io">my blog</a> or <a href="https://www.linkedin.com/profile/view?id=409609864">my LinkedIn</a>.</p> 
         </li>
         <li class="portfolio toggle">portfolio</li>
-        <li class="portfolio panel">
+        <li class="panel" id="portfolio">
           Coming soon!
           <br>
           In the meantime, <a href="http://github.com/ATMartin">check out my Github</a>!
         </li>
         <li class="resume toggle">resume</li>
-        <li class="resume panel">
+        <li class="panel" id="resume">
           <a href="http://docs.google.com/document/d/1tKRHd-t9jp8ybSwKJtRc68uCUg0oo3uQREBznP8OGq8">
             <h3 style="text-align: center;">(click here for print-friendly version)</h3>
           </a>
@@ -89,7 +90,7 @@
           </a>
         </li>
         <li class="contact toggle">contact</li>
-        <li class="contact panel">
+        <li class="panel" id="contact">
           email: hello@atmartin.io
           <br>
           phone: +1-803-537-6375
