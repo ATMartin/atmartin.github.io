@@ -216,12 +216,15 @@ h5 { margin: 0; }
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: $darkest;
     overflow: scroll;
     .overlay {
       position: absolute;
       height: 100%;
       width: 100%;
       background: rgba(30, 30, 30, 0.8);
+      overflow: scroll;
+      @media (max-height: 800px) { height: 150%; }
       transition: all ease 0.5s;
       &:hover { background: rgba(30, 30, 30, 0); }
       &:hover ~ .title,
@@ -259,11 +262,13 @@ h5 { margin: 0; }
       left: 10%;
       width: 80%;
       font-size: 1.25em;
-      transition: all ease 0.5s;
-      .welcome-box {
-        min-height: 400px;
-        @media (max-height: 1000px) { font-size: 0.75em; }
+      @media (max-height: 800px) { 
+        font-size: 0.75em; 
+        bottom: auto;
+        top: 4em;
+        overflow: scroll;
       }
+      transition: all ease 0.5s;
       a:link { color: white; }
       a:visited {
         color:white;

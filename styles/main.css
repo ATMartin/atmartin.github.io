@@ -178,13 +178,18 @@ h5 {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: #333333;
   overflow: scroll; }
   #portfolio .portfolio-preview .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     background: rgba(30, 30, 30, 0.8);
+    overflow: scroll;
     transition: all ease 0.5s; }
+    @media (max-height: 800px) {
+      #portfolio .portfolio-preview .overlay {
+        height: 150%; } }
     #portfolio .portfolio-preview .overlay:hover {
       background: rgba(30, 30, 30, 0); }
     #portfolio .portfolio-preview .overlay:hover ~ .title, #portfolio .portfolio-preview .overlay:hover ~ .info {
@@ -224,11 +229,12 @@ h5 {
     width: 80%;
     font-size: 1.25em;
     transition: all ease 0.5s; }
-    #portfolio .portfolio-preview .info .welcome-box {
-      min-height: 400px; }
-      @media (max-height: 1000px) {
-        #portfolio .portfolio-preview .info .welcome-box {
-          font-size: 0.75em; } }
+    @media (max-height: 800px) {
+      #portfolio .portfolio-preview .info {
+        font-size: 0.75em;
+        bottom: auto;
+        top: 4em;
+        overflow: scroll; } }
     #portfolio .portfolio-preview .info a:link {
       color: white; }
     #portfolio .portfolio-preview .info a:visited {
