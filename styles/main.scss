@@ -204,7 +204,74 @@ h5 { margin: 0; }
   }
 }
 
-#portfolio {}
+#portfolio {
+  .portfolio-preview {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
+    border: 2px solid $dark;
+    color: white;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(30, 30, 30, 0.8);
+      transition: all ease 0.5s;
+      &:hover { background: rgba(30, 30, 30, 0); }
+      &:hover ~ .title,
+      &:hover ~ .info { opacity: 0; }
+    }
+    .left,
+    .right {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      padding-top: 25%;
+      width: 8%;
+      transition: all ease 0.5s;
+      &:hover {
+        background: rgba(80, 80, 80, 0.8);
+      }
+    }
+    .left { left: 0; }
+    .right { right: 0; }
+    .title {
+      text-align: left;
+      position: absolute;
+      top: 2%;
+      left: 10%;
+      width: 80%;
+      font-size: 2em;  
+      font-weight: 700;
+      transition: all ease 0.5s;
+      @media (max-width: 530px) { font-size: 1.5em; }
+    }
+    .info {
+      text-align: left;
+      position: absolute;
+      bottom: 5%;
+      left: 10%;
+      width: 80%;
+      font-size: 1.25em;
+      transition: all ease 0.5s;
+      .welcome-box {
+        min-height: 400px;
+        @media (max-height: 1000px) { font-size: 0.75em; }
+      }
+      a:link { color: white; }
+      a:visited {
+        color:white;
+      }
+    }
+  }
+}
+
 #contact {
   font-size: 2em;
   font-weight: 300;
