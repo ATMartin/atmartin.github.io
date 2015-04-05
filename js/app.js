@@ -39,7 +39,7 @@ portfolios = [
   {
     title: "Askqueue",
     img: "img/app-askqueue.png",
-    info: "Written as a classroom time-saver. Allows multiple users to save questions and vote on whether or not the questions are worth following up on. Used at The Iron Yard as a classroom time-save. Uses jQuery on the clientside & Firebase for persistence. <a href='http://production.tiy-atm-askqueue.divshot.io/' target='_blank'>Live demo</a>."
+    info: "Allows multiple users to save questions and vote on whether or not the questions are worth following up on. Used at The Iron Yard as a classroom time-saver. Uses jQuery on the clientside & Firebase for persistence. <a href='http://production.tiy-atm-askqueue.divshot.io/' target='_blank'>Live demo</a>."
   },
   {
     title: "JS Calc",

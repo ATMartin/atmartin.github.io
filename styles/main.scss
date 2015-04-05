@@ -122,6 +122,10 @@ h5 { margin: 0; }
         font-size: 1.5em;
         line-height: 4em;
       }
+      @media (max-height: 550px) {
+        font-size: 1em;
+        line-height: 1em;
+      }
       &:hover {
         background: black;
         color: white;
@@ -217,14 +221,14 @@ h5 { margin: 0; }
     background-size: contain;
     background-repeat: no-repeat;
     background-color: $darkest;
-    overflow: scroll;
+    //overflow: scroll;
     .overlay {
       position: absolute;
       height: 100%;
       width: 100%;
       background: rgba(30, 30, 30, 0.8);
-      overflow: scroll;
-      @media (max-height: 800px) { height: 150%; }
+      //overflow: scroll;
+      @media (max-height: 800px) { height: 100%; }
       transition: all ease 0.5s;
       &:hover { background: rgba(30, 30, 30, 0); }
       &:hover ~ .title,
@@ -264,8 +268,8 @@ h5 { margin: 0; }
       font-size: 1.25em;
       @media (max-height: 800px) { 
         font-size: 0.75em; 
-        bottom: auto;
-        top: 4em;
+        bottom: 5%;
+        padding-top: 4em;
         overflow: scroll;
       }
       transition: all ease 0.5s;

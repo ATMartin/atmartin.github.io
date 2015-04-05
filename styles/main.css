@@ -103,6 +103,10 @@ h5 {
         .menu .menu-nav .toggle {
           font-size: 1.5em;
           line-height: 4em; } }
+      @media (max-height: 550px) {
+        .menu .menu-nav .toggle {
+          font-size: 1em;
+          line-height: 1em; } }
       .menu .menu-nav .toggle:hover {
         background: black;
         color: white; }
@@ -178,18 +182,16 @@ h5 {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #333333;
-  overflow: scroll; }
+  background-color: #333333; }
   #portfolio .portfolio-preview .overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     background: rgba(30, 30, 30, 0.8);
-    overflow: scroll;
     transition: all ease 0.5s; }
     @media (max-height: 800px) {
       #portfolio .portfolio-preview .overlay {
-        height: 150%; } }
+        height: 100%; } }
     #portfolio .portfolio-preview .overlay:hover {
       background: rgba(30, 30, 30, 0); }
     #portfolio .portfolio-preview .overlay:hover ~ .title, #portfolio .portfolio-preview .overlay:hover ~ .info {
@@ -232,8 +234,8 @@ h5 {
     @media (max-height: 800px) {
       #portfolio .portfolio-preview .info {
         font-size: 0.75em;
-        bottom: auto;
-        top: 4em;
+        bottom: 5%;
+        padding-top: 4em;
         overflow: scroll; } }
     #portfolio .portfolio-preview .info a:link {
       color: white; }
