@@ -16,7 +16,9 @@ h5 {
 #splash {
   text-align: center; }
   #splash .logo {
+    margin: 0 auto;
     position: fixed;
+    margin-left: -100px;
     display: inline-block;
     background-image: url("../img/am-logo.svg");
     background-position: center center;
@@ -24,13 +26,25 @@ h5 {
     background-repeat: no-repeat; }
   #splash .scroll-prompt {
     position: fixed;
-    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
     text-align: center;
-    font-family: 'Lato', sans-serif; }
+    font-family: 'Lato', sans-serif;
+    margin-left: -40px;
+    top: 60%; }
+    @media (max-height: 950px) {
+      #splash .scroll-prompt {
+        top: 70%; } }
+    @media (max-height: 650px) {
+      #splash .scroll-prompt {
+        top: 80%; } }
+    @media (max-height: 500px) {
+      #splash .scroll-prompt {
+        top: 90%; } }
+    @media (max-height: 400px) {
+      #splash .scroll-prompt {
+        top: 30%; } }
     #splash .scroll-prompt .prompt-text {
-      display: inline-block;
-      position: fixed;
-      left: 48.2%;
       transition: all ease 0.5s;
       -webkit-animation-name: pulse;
       -webkit-animation-duration: 4s;
@@ -241,6 +255,9 @@ h5 {
       color: white; }
     #portfolio .portfolio-preview .info a:visited {
       color: white; }
+    @media (max-height: 700px), (max-width: 750px) {
+      #portfolio .portfolio-preview .info .preview-details {
+        display: none; } }
 
 #contact {
   font-size: 2em;

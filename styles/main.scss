@@ -28,7 +28,9 @@ h5 { margin: 0; }
 #splash {
   text-align: center;
   .logo {
+    margin: 0 auto;
     position: fixed;
+    margin-left: -100px;
     display: inline-block;
     background-image: $logo-svg;
     background-position: center center;
@@ -37,13 +39,19 @@ h5 { margin: 0; }
   }
   .scroll-prompt {
     position: fixed;
-    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
     text-align: center;
     font-family: 'Lato', sans-serif;
+    margin-left: -40px;
+    top: 60%; 
+    @media (max-height: 950px) { top: 70%; }
+    @media (max-height: 650px) { top: 80%; }
+    @media (max-height: 500px) { top: 90%; }
+    // Move scroll prompt above logo when we get small enough
+    // to hit clipping constraints.
+    @media (max-height: 400px) { top: 30%; }
     .prompt-text {
-      display: inline-block;
-      position: fixed;
-      left: 48.2%;
       transition: all ease 0.5s;
       -webkit-animation-name: pulse;
       -webkit-animation-duration: 4s;
@@ -276,6 +284,9 @@ h5 { margin: 0; }
       a:link { color: white; }
       a:visited {
         color:white;
+      }
+      .preview-details {
+        @media (max-height: 700px), (max-width: 750px) { display: none; }
       }
     }
   }
