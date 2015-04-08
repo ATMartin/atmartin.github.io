@@ -255,7 +255,7 @@ h5 {
       color: white; }
     #portfolio .portfolio-preview .info a:visited {
       color: white; }
-    @media (max-height: 700px), (max-width: 750px) {
+    @media (max-height: 700px), (max-width: 1200px) {
       #portfolio .portfolio-preview .info .preview-details {
         display: none; } }
 
